@@ -8,10 +8,12 @@ let balance = 0;
 let expenses = [];
 
 function addExpense(description, amount) {
+  const currentDate = new Date().toLocaleDateString("en-US");
   const expense = {
     id: Math.floor(Math.random() * 1000000),
     description,
     amount: +amount,
+    date: currentDate,
   };
   expenses.push(expense);
   updateLocalStorage();
@@ -37,6 +39,7 @@ function updateUI() {
         `<li class="expense-item">
             <span>${expense.description}</span>
             <span>Rs.${expense.amount.toFixed(2)}</span>
+            <span>${expense.date}</span>
             <button onclick="deleteExpense(${expense.id})">Delete</button>
         </li>`
     )
@@ -58,3 +61,4 @@ window.addEventListener("DOMContentLoaded", () => {
   expenses = JSON.parse(localStorage.getItem("expenses")) || [];
   updateUI();
 });
+

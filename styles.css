@@ -2,12 +2,13 @@ body {
 font-family: Arial, sans-serif;
 margin: 0;
 padding: 0;
+background-color: #d4ccab;
 }
 .container {
 max-width: 800px;
 margin: 20px auto;
 padding: 20px;
-border: 1px solid #ccc;
+border: 1px solid #8f8c8c;
 border-radius: 5px;
 }
 h1, h2 {
@@ -19,6 +20,7 @@ margin-bottom: 20px;
 label, input, button {
 display: block;
 margin-bottom: 10px;
+border-radius: 5px;
 }
 button {
 padding: 5px 10px;
