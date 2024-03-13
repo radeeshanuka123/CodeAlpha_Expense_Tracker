@@ -21,6 +21,7 @@ label, input, button {
 display: block;
 margin-bottom: 10px;
 border-radius: 5px;
+background-color: #d4ccab;
 }
 button {
 padding: 5px 10px;
